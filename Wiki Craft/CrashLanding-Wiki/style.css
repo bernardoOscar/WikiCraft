@@ -1,42 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base do Site - Modo Claro */
 body {
     font-family: Arial, Helvetica, sans-serif;
+
     background-image: url('crashlanding.jpeg');
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
     color: #111827;
-    transition: background-color 0.3s, color 0.3s;
 }
 
-/* ==========================================================================
-   HEADER (BARRA SUPERIOR)
-   ========================================================================== */
 header {
-    background-color: #1f2937; /* Cinza escuro elegante que destaca os elementos */
+    background-color: #1f2937;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
 }
 
-/* Configuração da Logo */
 .logo {
     color: white;
     font-size: 28px;
     font-weight: bold;
     display: flex;
-    align-items: center;
+    align-items: center; 
     background-image: none; 
     padding: 0;
     text-shadow: none;
@@ -54,7 +46,9 @@ header {
     color: white;
     padding: 0;
     border-radius: 0;
+
     margin-right: 3px; 
+    
     display: inline-block;
 }
 
@@ -67,8 +61,6 @@ header {
     display: inline-block;
     transform: translateY(3px);
 }
-
-/* Menu de Navegação */
 nav {
     display: flex;
     gap: 30px;
@@ -77,22 +69,177 @@ nav {
 nav a {
     text-decoration: none;
     color: #9ca3af;
-    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    padding-bottom: 4px;
+}
+
+nav a:hover {
+    color: #60a5fa;
+    transform: translateY(-2px); 
+}
+
+nav a.active {
+    color: white;
+    border-bottom: 2px solid #60a5fa;
+}
+
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05); 
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;  
+}
+
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.banner h1 {
+    font-size: 52px;
+    margin-bottom: 15px;
+    color: #1f2937;
+}
+
+.banner p {
+    font-size: 20px;
+    color: #6b7280;
+}
+
+.secao {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.secao h2 {
+    color: #2563eb;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 10px;
+}
+
+.secao article p {
     font-size: 16px;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding-bottom: 5px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #374151;
 }
 
-nav a:hover, nav a.active {
-    color: #ff8c00; /* Laranja desértico ativo */
-    border-bottom: 2px solid #ff8c00;
+.secao article h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: #1f2937;
 }
 
-/* Área de botões no topo */
-.acoes-header {
+.video-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.tabela-info th, .tabela-info td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tabela-info th {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    font-weight: bold;
+}
+
+.tabela-info tr:hover {
+    background-color: #f9fafb; 
+}
+
+.card-noticia {
+    padding: 20px;
+    border-left: 4px solid #60a5fa;
+    background-color: #f8fafc;
+    margin-bottom: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.lista-contatos {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: 15px;
+    align-items: center; 
+    margin-top: 20px;
+}
+
+.item-contato {
+    background-color: #f3f4f6;
+    padding: 15px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.item-contato:hover {
+    background-color: #e5e7eb;
+}
+
+body.dark-mode {
+    background-color: #111827; 
+    color: #f3f4f6; 
+}
+
+body.dark-mode .secao {
+    background-color: #1f2937; 
+    color: #f3f4f6;
+}
+
+body.dark-mode .secao h2, 
+body.dark-mode .secao article h3,
+body.dark-mode .secao article p {
+    color: #f3f4f6; 
+}
+
+body.dark-mode .card-noticia {
+    background-color: #374151;
+    border-left-color: #ff8c00; 
+}
+
+body.dark-mode .tabela-info th {
+    background-color: #374151;
+    color: #ffffff;
+}
+
+body.dark-mode .tabela-info td {
+    color: #e5e7eb;
+    border-bottom-color: #4b5563;
 }
 
 .btn-tema {
@@ -101,8 +248,11 @@ nav a:hover, nav a.active {
     font-size: 20px;
     cursor: pointer;
     padding: 8px;
-    border-radius: 50%;
-    transition: background-color 0.3s;
+    border-radius: 50px;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-tema:hover {
@@ -119,162 +269,15 @@ nav a:hover, nav a.active {
     cursor: pointer;
     text-decoration: none;
     font-size: 14px;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
 }
 
 .btn-inicio:hover {
     background-color: #e07b00;
 }
 
-/* ==========================================================================
-   CONTEÚDO E JANELAS FLUTUANTES (MODO CLARO)
-   ========================================================================== */
-.conteudo {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
-}
-
-/* Efeito de vidro transparente para as seções */
-.secao {
-    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco com 85% de opacidade */
-    backdrop-filter: blur(8px); /* Desfoca suavemente a imagem do deserto atrás */
-    -webkit-backdrop-filter: blur(8px);
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-.banner {
-    text-align: center;
-    padding: 60px 20px;
-    background-color: rgba(31, 41, 55, 0.85); /* Banner escuro transparente */
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: white;
-    border-radius: 12px;
-    margin-bottom: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.banner h1 {
-    font-size: 42px;
-    margin-bottom: 15px;
-    color: #ff8c00; /* Título principal em laranja temático */
-}
-
-/* Títulos das seções - Tema Desértico */
-.secao h2 {
-    font-size: 26px;
-    color: #d97706; /* Laranja terroso profundo */
-    margin-bottom: 20px;
-    border-bottom: 3px solid #ff8c00; /* Linha divisória em laranja quente */
-    padding-bottom: 10px;
-}
-
-.secao article h3 {
-    margin-bottom: 12px;
-    font-size: 22px;
-    color: #b45309; /* Tom de barro/argila cozida */
-}
-
-.secao article p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #374151;
-}
-
-/* Vídeos e Tabelas */
-.video-container {
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
-}
-
-.tabela-info {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 15px;
-    font-size: 16px;
-}
-
-.tabela-info th, .tabela-info td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.tabela-info th {
-    background-color: rgba(217, 119, 6, 0.2); /* Fundo sutil do título da tabela */
-    color: #b45309;
-    font-weight: bold;
-}
-
-/* Cards de Notícias */
-.card-noticia {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-left: 5px solid #ff8c00;
-    border-radius: 0 8px 8px 0;
-}
-
-/* Contatos */
-.lista-contatos {
+.acoes-header {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
     align-items: center;
-    margin-top: 20px;
+    gap: 15px;
 }
-
-.item-contato {
-    font-size: 18px;
-    background-color: rgba(255, 255, 255, 0.6);
-    padding: 15px 30px;
-    border-radius: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    width: 100%;
-    max-width: 400px;
-}
-
-/* ==========================================================================
-   CONFIGURAÇÃO DO MODO ESCURO (DARK MODE) INTERATIVO
-   ========================================================================== */
-
-/* Ajuste do Header no Modo Escuro */
-body.dark-mode header {
-    background-color: #0f172a; /* Tom escuro azulado bem profundo */
-}
-
-body.dark-mode .btn-tema:hover {
-    background-color: #1e293b;
-}
-
-/* Janelas Flutuantes no Modo Escuro */
-body.dark-mode .secao {
-    background-color: rgba(17, 24, 39, 0.85); /* Fundo escuro com 85% de opacidade */
-    color: #f3f4f6;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-/* Cores de Letras e Destaques no Modo Escuro */
-body.dark-mode .secao h2 {
-    color: #ff9d24; /* Laranja desértico brilhante para contraste no escuro */
-    border-bottom-color: #ff8c00;
-}
-
-body.dark-mode .secao article h3 {
-    color: #fbbf24; /* Amarelo areia quente */
-}
-
-body.dark-mode .secao article p {
-    color: #e5e7eb; /* Texto legível claro */
-}
-
-body.dark-mode .card-noticia {
-    background-color: rgba(255, 255, 255, 0.05);
-    border-

@@ -22,14 +22,11 @@
             <button class="btn-tema" id="toggle-tema" title="Alternar Tema">🌙</button>
             <a href="index.html" class="btn-inicio">Início</a>
         </div>
-
         <script>
             const btnTema = document.getElementById('toggle-tema');
-            
-            // Verifica se o usuário já tinha deixado o modo escuro ativo antes
             if (localStorage.getItem('tema') === 'dark') {
                 document.body.classList.add('dark-mode');
-                btnTema.textContent = '☀️'; // Muda para Sol se estiver escuro
+                btnTema.textContent = '☀️'; 
             }
 
             btnTema.addEventListener('click', () => {
@@ -45,19 +42,16 @@
             });
         </script>
     </header>
-
     <main class="conteudo">
         <section class="banner">
             <h1>CrashLanding Wiki</h1>
             <p>O guia definitivo e central de sobrevivência extrema para o modpack Dust Bowl do Minecraft</p>
         </section>
-
         <section class="secao">
             <h2>O que é o CrashLanding?</h2>
             <p>O <strong>CrashLanding</strong> é um dos modpacks técnicos de sobrevivência mais icônicos e desafiadores da história do Minecraft. Diferente dos pacotes tradicionais onde o mundo é infinito e cheio de recursos, aqui você é o único sobrevivente de uma nave espacial que caiu em um planeta completamente desértico e hostil.</p>
             <p>O modpack combina tecnologia, automação industrial e sobrevivência hardcore rigorosa. Cada bloco de poeira precisa ser processado, cada gota de água é preciosa e a tecnologia é a sua única saída para não morrer de desidratação ou superaquecimento.</p>
         </section>
-
         <section class="secao">
             <h2>Últimas Notícias do Modpack</h2>
             <article class="card-noticia">
@@ -66,7 +60,6 @@
                 <p>A atualização reconstrói a experiência do passado de maneira totalmente funcional, provando que um clássico absoluto ainda pode ser extremamente divertido, desafiador e imersivo nos dias de hoje. Isso permite que veteranos matem a saudade e novos jogadores descubram a era de ouro dos modpacks hardcore.</p>
             </article>
         </section>
-
         <section class="secao">
             <h2>O que você vai encontrar na playlist aqui embaixo?</h2>
             <p>Se você quer ver na prática como sobreviver nesse planeta de poeira sem passar sufoco, essa playlist de gameplay é o ponto de partida perfeito! Nos vídeos abaixo, a gente vai acompanhar:</p>
@@ -75,12 +68,10 @@
                 <li><strong>Sistemas e Automações:</strong> A construção de gambiarras e máquinas para gerar água infinita e energia usando os mods técnicos.</li>
                 <li><strong>Progressão de Missões:</strong> Estratégias direto ao ponto para completar o livro de Quests e dominar o modpack.</li>
             </ul>
-
             <div class="video-container">
                 <iframe width="100%" height="450" src="https://www.youtube.com/embed/eSUVXQKCVnU?list=PLX__f0eSr4yAGluDu2fOTqGR4Iscj6PK7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
-
     </main>
 </body>
 </html>

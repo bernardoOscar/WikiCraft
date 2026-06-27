@@ -25,11 +25,9 @@
 
         <script>
             const btnTema = document.getElementById('toggle-tema');
-            
-            // Verifica se o usuário já tinha deixado o modo escuro ativo antes
             if (localStorage.getItem('tema') === 'dark') {
                 document.body.classList.add('dark-mode');
-                btnTema.textContent = '☀️'; // Muda para Sol se estiver escuro
+                btnTema.textContent = '☀️'; 
             }
 
             btnTema.addEventListener('click', () => {
@@ -45,12 +43,10 @@
             });
         </script>
     </header>
-
     <main class="conteudo">
         <section class="secao" style="text-align: center; max-width: 600px; margin: 0 auto;">
             <h2>Onde nos encontrar</h2>
-            <p style="margin-bottom: 30px; color: #4b5563;">Tem alguma dúvida sobre a Wiki ou quer sugerir novos guias de mods? Entre em contato por meio das nossas redes sociais ou comunidade!</p>
-            
+            <p style="margin-bottom: 30px; color: #4b5563;">Tem alguma dúvida sobre a Wiki ou quer sugerir novos guias de mods? Entre em contato por meio das nossas redes sociais ou comunidade!</p>         
            <div class="lista-contatos">
                 <div class="item-contato">
                     <strong>GitHub:</strong> <a href="https://github.com/bernardoOscar/WikiCraft" target="_blank" style="color: #ff8c00; text-decoration: none; font-weight: bold;">github.com/bernardoOscar/WikiCraft</a>
