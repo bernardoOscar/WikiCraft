@@ -13,7 +13,7 @@
             <span class="fundo-oval">Wiki</span><span class="texto-craft">Craft</span>
         </div>
         <nav>
-            <a href="index.html">Início</a>
+            <a href="index.html" class="active">Início</a>
             <a href="motivacao.html">Motivação</a>
             <a href="noticias.html">Notícias MC</a>
             <a href="contato.html">Contato</a>
@@ -28,10 +28,8 @@
                 document.body.classList.add('dark-mode');
                 btnTema.textContent = '☀️'; 
             }
-
             btnTema.addEventListener('click', () => {
                 document.body.classList.toggle('dark-mode');
-                
                 if (document.body.classList.contains('dark-mode')) {
                     localStorage.setItem('tema', 'dark');
                     btnTema.textContent = '☀️';
@@ -42,24 +40,19 @@
             });
         </script>
     </header>
+
     <main class="conteudo">
         <section class="banner">
             <h1>CrashLanding Wiki</h1>
             <p>O guia definitivo e central de sobrevivência extrema para o modpack Dust Bowl do Minecraft</p>
         </section>
+
         <section class="secao">
             <h2>O que é o CrashLanding?</h2>
             <p>O <strong>CrashLanding</strong> é um dos modpacks técnicos de sobrevivência mais icônicos e desafiadores da história do Minecraft. Diferente dos pacotes tradicionais onde o mundo é infinito e cheio de recursos, aqui você é o único sobrevivente de uma nave espacial que caiu em um planeta completamente desértico e hostil.</p>
             <p>O modpack combina tecnologia, automação industrial e sobrevivência hardcore rigorosa. Cada bloco de poeira precisa ser processado, cada gota de água é preciosa e a tecnologia é a sua única saída para não morrer de desidratação ou superaquecimento.</p>
         </section>
-        <section class="secao">
-            <h2>Últimas Notícias do Modpack</h2>
-            <article class="card-noticia">
-                <h3>CrashLanding recebe nova atualização após 7 anos</h3>
-                <p>Após 7 anos sem ter nenhuma atualização para nenhuma versão mais atual do Minecraft, essa nova versão traz o suporte necessário para que o modpack funcione perfeitamente nas plataformas modernas, mantendo a fidelidade de todos os mods clássicos originais.</p>
-                <p>A atualização reconstrói a experiência do passado de maneira totalmente funcional, provando que um clássico absoluto ainda pode ser extremamente divertido, desafiador e imersivo nos dias de hoje. Isso permite que veteranos matem a saudade e novos jogadores descubram a era de ouro dos modpacks hardcore.</p>
-            </article>
-        </section>
+
         <section class="secao">
             <h2>O que você vai encontrar na playlist aqui embaixo?</h2>
             <p>Se você quer ver na prática como sobreviver nesse planeta de poeira sem passar sufoco, essa playlist de gameplay é o ponto de partida perfeito! Nos vídeos abaixo, a gente vai acompanhar:</p>

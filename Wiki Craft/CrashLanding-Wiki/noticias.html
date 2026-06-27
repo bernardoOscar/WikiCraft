@@ -15,7 +15,7 @@
         <nav>
             <a href="index.html">Início</a>
             <a href="motivacao.html">Motivação</a>
-            <a href="noticias.html">Notícias MC</a>
+            <a href="noticias.html" class="active">Notícias MC</a>
             <a href="contato.html">Contato</a>
         </nav>
         <div class="acoes-header">
@@ -30,7 +30,6 @@
             }
             btnTema.addEventListener('click', () => {
                 document.body.classList.toggle('dark-mode');
-                
                 if (document.body.classList.contains('dark-mode')) {
                     localStorage.setItem('tema', 'dark');
                     btnTema.textContent = '☀️';
@@ -41,23 +40,27 @@
             });
         </script>
     </header>
+
     <main class="conteudo">
         <section class="secao">
-            <h2>Mundo Minecraft: Novidades e Atualizações</h2>    
+            <h2>Mundo Minecraft: Novidades e Atualizações</h2>
+            
             <article class="card-noticia">
                 <h3>O impacto das novas versões na jornada dos Modpacks</h3>
                 <p>A Mojang não para de lançar atualizações oficiais para o Minecraft baunilha, trazendo mecânicas novas de geração de mundo, novas engines e blocos inéditos. Mas você já parou para pensar no que acontece com os modpacks que a gente tanto ama?</p>
                 <p>Quando o jogo base muda muito, os criadores de modificações têm um trabalho gigantesco. Mods clássicos de tecnologia e automação industrial (como os que usamos aqui no CrashLanding) precisam ser praticamente reescritos do zero para funcionar nas versões mais novas. Isso muda completamente a jornada dos pacotes: muitos acabam ficando "presos" em versões antigas por anos, enquanto outros tentam se reinventar trazendo ferramentas modernas que deixam a jogabilidade ainda mais otimizada e bonita.</p>
             </article>
+
             <article class="card-noticia">
                 <h3>Como o "Novo Minecraft" transforma a sobrevivência Hardcore</h3>
                 <p>As versões recentes do Minecraft mudaram totalmente a física e o comportamento do jogo, como o sistema de cavernas gigantes e os novos biomas. Trazer um modpack hardcore clássico de sobrevivência no deserto para essas versões modernas cria uma experiência totalmente nova.</p>
                 <p>Imagino o desafio que é gerenciar a insolação e a desidratação em um motor de jogo muito mais pesado, mas que ao mesmo tempo permite gráficos melhores e uma renderização de poeira muito mais realista! Essa evolução faz com que os jogadores antigos tenham que reaprender velhos macetes e os novos encontrem um jogo muito mais fluido.</p>
             </article>
+
             <article class="card-noticia">
                 <h3>A nostalgia está em alta: O ressurgimento dos servidores Survival Hardcore</h3>
                 <p>Fóruns e comunidades de Minecraft mostram que os jogadores veteranos andam meio cansados do jogo comum e estão buscando desafios reais de sobrevivência extrema, exatamente como os mapas baseados em livros de missões e blocos de comando de antigamente.</p>
-                <p>É por isso que pacotes lendários como o CrashLanding continuam relevantes mesmo depois de tanto tempo. A galera quer sentir de novo aquela adrenalina de abrir o jogo e ter que lutar de verdade para conseguir cada recurso, provando que uma boa ideia de gameplay nunca fica velha.</p>
+                <p>É por isso que pacotes lendários como o CrashLanding continuam relevantes mesmo depois de tanto tempo. A galera quer sentir de novo aquela adrenaline de abrir o jogo e ter que lutar de verdade para conseguir cada recurso, provando que uma boa ideia de gameplay nunca fica velha.</p>
             </article>
         </section>
     </main>
