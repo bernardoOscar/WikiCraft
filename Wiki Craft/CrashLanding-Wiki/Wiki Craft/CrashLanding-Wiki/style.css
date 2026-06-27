@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base do Site - Modo Claro */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('crashlanding.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #111827;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #1f2937; /* Cinza escuro elegante que destaca os elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center; 
+    background-image: none; 
+    padding: 0;
+    text-shadow: none;
+}
+
+.logo-bloco {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-right: 10px; 
+}
+
+.fundo-oval {
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    border-radius: 0;
+    margin-right: 3px; 
+    display: inline-block;
+}
+
+.texto-craft {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: white;
+    margin-left: 0; 
+    text-transform: uppercase;
+    display: inline-block;
+    transform: translateY(3px); /* Alinhamento milimétrico de altura */
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+nav a:hover, nav a.active {
+    color: #ff8c00; /* Laranja desértico */
+    border-bottom: 2px solid #ff8c00;
+}
+
+.acoes-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-tema {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.btn-tema:hover {
+    background-color: #374151;
+}
+
+.btn-inicio {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-inicio:hover {
+    background-color: #e07b00;
+}
+
+.conteudo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Efeito de vidro transparente para as seções */
+.secao {
+    background-color: rgba(255, 255, 255, 0.85); /* 85% de opacidade */
+    backdrop-filter: blur(8px); /* Desfoque de fundo elegante */
+    -webkit-backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo claro transparente no Modo Claro */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #111827; /* Texto escuro para dar leitura */
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #ff8c00; 
+}
+
+/* Destaques e títulos com cores desérticas */
+.secao h2 {
+    font-size: 26px;
+    color: #d97706; /* Laranja terroso */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff8c00; 
+    padding-bottom: 10px;
+}
+
+.secao article h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: #b45309; /* Tom de argila/barro */
+}
+
+.secao article p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #374151;
+}
+
+.video-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.tabela-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.tabela-info th, .tabela-info td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tabela-info th {
+    background-color: rgba(217, 119, 6, 0.2); 
+    color: #b45309;
+    font-weight: bold;
+}
+
+.card-noticia {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 5px solid #ff8c00;
+    border-radius: 0 8px 8px 0;
+}
+
+.lista-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.item-contato {
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+}
+
+body.dark-mode {
+    background-color: #111827; 
+    color: #f3f4f6; 
+}
+
+body.dark-mode header {
+    background-color: #0f172a; /* Header se integra ao modo escuro */
+}
+
+body.dark-mode .btn-tema:hover {
+    background-color: #1e293b;
+}
+
+body.dark-mode .secao {
+    background-color: rgba(17, 24, 39, 0.85); /* Janelas escuras transparentes */
+    color: #f3f4f6;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .secao h2 {
+    color: #ff9d24; /* Contraste desértico no escuro */
+    border-bottom-color: #ff8c00;
+}
+
+body.dark-mode .secao article h3 {
+    color: #fbbf24; /* Tom de areia quente */
+}
+
+body.dark-mode .secao article p {
+    color: #e5e7eb;
+}
+
+body.dark-mode .card-noticia {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-left-color: #ff8c00;
+}
+
+body.dark-mode .tabela-info th {
+    background-color: rgba(255, 140, 0, 0.15);
+    color: #fbbf24;
+}
+
+body.dark-mode .tabela-info td {
+    color: #d1d5db;
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .item-contato {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .banner {
+    background-color: rgba(17, 24, 39, 0.85); 
+    color: #f3f4f6; 
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode .banner h1 {
+    color: #ff9d24; 
+}
