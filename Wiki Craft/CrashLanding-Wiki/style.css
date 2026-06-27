@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base do Site - Modo Claro */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('crashlanding.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #111827;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ==========================================================================
+   HEADER (BARRA SUPERIOR)
+   ========================================================================== */
+header {
+    background-color: #1f2937; /* Cinza escuro elegante que destaca os elementos */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Configuração da Logo */
+.logo {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    background-image: none; 
+    padding: 0;
+    text-shadow: none;
+}
+
+.logo-bloco {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-right: 10px; 
+}
+
+.fundo-oval {
+    background-color: transparent;
+    color: white;
+    padding: 0;
+    border-radius: 0;
+    margin-right: 3px; 
+    display: inline-block;
+}
+
+.texto-craft {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    color: white;
+    margin-left: 0; 
+    text-transform: uppercase;
+    display: inline-block;
+    transform: translateY(3px);
+}
+
+/* Menu de Navegação */
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
+}
+
+nav a:hover, nav a.active {
+    color: #ff8c00; /* Laranja desértico ativo */
+    border-bottom: 2px solid #ff8c00;
+}
+
+/* Área de botões no topo */
+.acoes-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-tema {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.btn-tema:hover {
+    background-color: #374151;
+}
+
+.btn-inicio {
+    background-color: #ff8c00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-inicio:hover {
+    background-color: #e07b00;
+}
+
+/* ==========================================================================
+   CONTEÚDO E JANELAS FLUTUANTES (MODO CLARO)
+   ========================================================================== */
+.conteudo {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Efeito de vidro transparente para as seções */
+.secao {
+    background-color: rgba(255, 255, 255, 0.85); /* Fundo branco com 85% de opacidade */
+    backdrop-filter: blur(8px); /* Desfoca suavemente a imagem do deserto atrás */
+    -webkit-backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(31, 41, 55, 0.85); /* Banner escuro transparente */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #ff8c00; /* Título principal em laranja temático */
+}
+
+/* Títulos das seções - Tema Desértico */
+.secao h2 {
+    font-size: 26px;
+    color: #d97706; /* Laranja terroso profundo */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff8c00; /* Linha divisória em laranja quente */
+    padding-bottom: 10px;
+}
+
+.secao article h3 {
+    margin-bottom: 12px;
+    font-size: 22px;
+    color: #b45309; /* Tom de barro/argila cozida */
+}
+
+.secao article p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #374151;
+}
+
+/* Vídeos e Tabelas */
+.video-container {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.tabela-info {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.tabela-info th, .tabela-info td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.tabela-info th {
+    background-color: rgba(217, 119, 6, 0.2); /* Fundo sutil do título da tabela */
+    color: #b45309;
+    font-weight: bold;
+}
+
+/* Cards de Notícias */
+.card-noticia {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-left: 5px solid #ff8c00;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Contatos */
+.lista-contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.item-contato {
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* ==========================================================================
+   CONFIGURAÇÃO DO MODO ESCURO (DARK MODE) INTERATIVO
+   ========================================================================== */
+
+/* Ajuste do Header no Modo Escuro */
+body.dark-mode header {
+    background-color: #0f172a; /* Tom escuro azulado bem profundo */
+}
+
+body.dark-mode .btn-tema:hover {
+    background-color: #1e293b;
+}
+
+/* Janelas Flutuantes no Modo Escuro */
+body.dark-mode .secao {
+    background-color: rgba(17, 24, 39, 0.85); /* Fundo escuro com 85% de opacidade */
+    color: #f3f4f6;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Cores de Letras e Destaques no Modo Escuro */
+body.dark-mode .secao h2 {
+    color: #ff9d24; /* Laranja desértico brilhante para contraste no escuro */
+    border-bottom-color: #ff8c00;
+}
+
+body.dark-mode .secao article h3 {
+    color: #fbbf24; /* Amarelo areia quente */
+}
+
+body.dark-mode .secao article p {
+    color: #e5e7eb; /* Texto legível claro */
+}
+
+body.dark-mode .card-noticia {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-

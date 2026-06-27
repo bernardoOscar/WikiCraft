@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | WikiCraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bloco.jpeg" alt="Bloco Minecraft" class="logo-bloco">  
+            <span class="fundo-oval">Wiki</span><span class="texto-craft">Craft</span>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="motivacao.html">Motivação</a>
+            <a href="noticias.html">Notícias MC</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="acoes-header">
+            <button class="btn-tema" id="toggle-tema" title="Alternar Tema">🌙</button>
+            <a href="index.html" class="btn-inicio">Início</a>
+        </div>
+
+        <script>
+            const btnTema = document.getElementById('toggle-tema');
+            
+            // Verifica se o usuário já tinha deixado o modo escuro ativo antes
+            if (localStorage.getItem('tema') === 'dark') {
+                document.body.classList.add('dark-mode');
+                btnTema.textContent = '☀️'; // Muda para Sol se estiver escuro
+            }
+
+            btnTema.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('tema', 'dark');
+                    btnTema.textContent = '☀️';
+                } else {
+                    localStorage.setItem('tema', 'light');
+                    btnTema.textContent = '🌙';
+                }
+            });
+        </script>
+    </header>
+
+    <main class="conteudo">
+        <section class="secao" style="text-align: center; max-width: 600px; margin: 0 auto;">
+            <h2>Onde nos encontrar</h2>
+            <p style="margin-bottom: 30px; color: #4b5563;">Tem alguma dúvida sobre a Wiki ou quer sugerir novos guias de mods? Entre em contato por meio das nossas redes sociais ou comunidade!</p>
+            
+            <div class="lista-contatos">
+                <div class="item-contato">
+                    <strong>GitHub:</strong> <a href="https://github.com/seu-usuario/projeto-wiki" target="_blank" style="color: #ff8c00; text-decoration: none; font-weight: bold;">github.com/seu-usuario/projeto-wiki</a>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

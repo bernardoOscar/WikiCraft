@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Por que o CrashLanding? | WikiCraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="bloco.jpeg" alt="Bloco Minecraft" class="logo-bloco">  
+            <span class="fundo-oval">Wiki</span><span class="texto-craft">Craft</span>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="motivacao.html">Motivação</a>
+            <a href="noticias.html">Notícias MC</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+        <div class="acoes-header">
+            <button class="btn-tema" id="toggle-tema" title="Alternar Tema">🌙</button>
+            <a href="index.html" class="btn-inicio">Início</a>
+        </div>
+
+        <script>
+            const btnTema = document.getElementById('toggle-tema');
+            
+            // Verifica se o usuário já tinha deixado o modo escuro ativo antes
+            if (localStorage.getItem('tema') === 'dark') {
+                document.body.classList.add('dark-mode');
+                btnTema.textContent = '☀️'; // Muda para Sol se estiver escuro
+            }
+
+            btnTema.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                
+                if (document.body.classList.contains('dark-mode')) {
+                    localStorage.setItem('tema', 'dark');
+                    btnTema.textContent = '☀️';
+                } else {
+                    localStorage.setItem('tema', 'light');
+                    btnTema.textContent = '🌙';
+                }
+            });
+        </script>
+    </header>
+
+    <<main class="conteudo">
+        <section class="secao">
+            <h2>Por que eu escolhi esse Modpack?</h2>
+            <article>
+                <p>Eu escolhi falar sobre o CrashLanding porque ele não é só mais um modpack qualquer de Minecraft. Para mim, ele é um dos pacotes de missões (Questing) mais tops e difíceis que já criaram.</p>
+                <p>O que eu acho mais daora é que ele muda totalmente o jeito normal de jogar. No Minecraft padrão, você acha comida e água super fácil em qualquer canto. Mas no CrashLanding, o jogo é implacável: você começa nos destroços de uma nave caída e tem que lidar o tempo todo com sede extrema, calor absurdo e falta de recursos. Cada escolha errada pode te custar a vida, e é isso que deixa o jogo tão viciante e recompensador quando você consegue progredir.</p>
+            </article>
+
+            <article style="margin-top: 30px;">
+                <h3>O que me inspirou a criar a Wiki</h3>
+                <p>A real motivação para montar esse site veio de uma nostalgia gigante. Eu joguei o CrashLanding quando era mais novo, e aquela sensação de estar isolado em um planeta desértico de poeira, lutando para conseguir cada gotinha de água limpando terra, ficou muito marcada na minha cabeça.</p>
+                <p>Passou um tempo e, recentemente, vi que a comunidade voltou a atualizar e a falar desse modpack de novo. Na hora me deu aquele estalo: era o momento perfeito para resgatar essas memórias! Criar essa Wiki é o meu jeito de homenagear esse pack que marcou a minha infância e, de quebra, dar uma força para quem está começando a sofrer e a se divertir nele agora.</p>
+            </article>
+            
+            <article style="margin-top: 40px;">
+                <h3>Dados Técnicos do Modpack</h3>
+                <table class="tabela-info">
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Detalhes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Criador Original</td>
+                            <td>Iskall85 / Team Jaded</td>
+                        </tr>
+                        <tr>
+                            <td>Estilo de Jogo</td>
+                            <td>Hardcore / Questing (Missões de Sobrevivência)</td>
+                        </tr>
+                        <tr>
+                            <td>Ambiente</td>
+                            <td>Planeta Desértico (Dust Bowl) / Sem água superficial</td>
+                        </tr>
+                        <tr>
+                            <td>Principais Mods</td>
+                            <td>EnviroMine, PneumaticCraft, Tinkers' Construct, JABBA</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
